@@ -1,0 +1,58 @@
+
+.main{
+    margin: 0;
+    min-width: 300px;
+}
+
+h1 h2 h3 h4 h5 h6 p{
+    margin: 0;
+}
+
+p {
+  widows: 2;
+  orphans: 2;
+}
+
+.main__proyecto-container{
+    min-height: 50vh;
+    min-width: 100%;
+    background-image: url(../imagenes/logo.png);            /*! cambiar foto*/
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    place-content: center;
+    
+}
+
+.main__text-container h2{
+    font-size: 30px;
+    color: #222;    
+    text-align: center;
+}
+
+.main__text-container p{
+    text-align: justify;    
+}
+
+.vistas-container h2{
+    margin: 0;
+    margin-left: 4px;
+}
+
+.linea{
+    padding: 1px;
+    background-color: #222;
+    max-width: 40%;
+    border-radius: 30px;
+}
+
+.img-vistas-container{
+    margin-top: 10px;
+}
+
+.img-vistas-EPA{
+    width: 400px;
+    height: auto;
+}
+
+

@@ -1,0 +1,145 @@
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: sans-serif;            /*!temporal*/
+    background-color: #e2eaff;        /*!temporal*/
+    color: #101632ee;
+}
+
+div,ul,nav,header,footer,a,li,label,body{
+    margin: 0;
+    padding: 0;
+}
+
+
+.header{
+    background-color: #222;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 100%;
+    /* width: 1200px; */
+
+    container-type: inline-size;         /*para el responsive*/
+    container-name: header ;
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    font-size: 13px;
+}
+
+.header__open-nav-button{
+    color: #71798f;
+    font-size: 1rem;
+    font-weight: 600;
+    position: absolute;         /*con esto se mueve directamente a la izquierda y se le puede dar left right etc*/
+    right: 10px;
+    z-index: 20;
+}
+
+.header__checkbox{
+    display: none;
+}
+
+.header__nav{
+    /* display: none; */
+    background-color: #222;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 60vw;
+    z-index: 15;
+    opacity: .86;
+
+    transform: translateX(-100%);
+    transition: transform .35s ease, opacity .25s ease;
+
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    padding: 2rem;
+    
+
+}
+
+.header__nav-list{
+    display: flex;
+    flex-direction:column ;
+    gap: 4rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+}
+
+.header__checkbox:checked ~ .header__nav{
+    /* display: flex; */
+    transform: translateX(0);
+    
+}
+
+.header__logo-container{
+    position: relative;
+    z-index: 20;
+}
+
+.header__img-logo{
+    max-width: 100%;
+    max-height: 32px;
+    width: 32px;
+    margin: 10px 3px;
+    border-radius: 3px;
+}
+
+.header__nav-item{
+    list-style: none;
+}
+
+.header__nav-item a{
+    color: #eee;
+    text-decoration: none;
+}
+
+.header__nav-item a:hover{
+    text-decoration: underline;
+}
+
+
+/* ------------------------ END HEADER SECTION ------------------------ */
+
+/* ------------------------ HEADER QUERIES ------------------------ */
+
+@container header (min-width: 700px) {
+    .header__nav{
+        display: flex;
+        position: inherit; /*toma la position del padre*/
+        right: 0;
+        height: auto;
+        width: auto;
+        justify-content: flex-end;
+        align-items: center;
+        z-index: auto;        
+        opacity: 1;
+        transform: none;
+        transition: none;
+        background: none;
+        padding: 0;
+    }
+
+    .header__nav-list{
+        flex-direction: row;
+        height: auto;
+        width: auto;
+        gap: 25px;
+        margin-right: 40px;
+        margin-left: auto; /* Esto empuja la lista a la derecha */
+    }
+
+    .header__open-nav-button{
+        display: none;
+    }
+}

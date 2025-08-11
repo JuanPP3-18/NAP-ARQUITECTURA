@@ -1,0 +1,125 @@
+/* static
+Es el valor por defecto. El elemento se posiciona según el flujo normal del documento. No acepta propiedades como top, right, bottom o left.
+
+relative
+El elemento se posiciona relativo a su posición original. Puedes moverlo usando top, right, bottom o left, pero sigue ocupando su espacio original.
+
+absolute
+El elemento se posiciona respecto al ancestro más cercano que tenga una posición distinta de static (por ejemplo, relative, absolute, fixed o sticky). Sale del flujo normal y no ocupa espacio.
+
+fixed
+El elemento se posiciona respecto a la ventana del navegador (viewport). Permanece fijo aunque hagas scroll.
+
+sticky
+El elemento alterna entre relative y fixed según el scroll. Por ejemplo, puede quedarse pegado en la parte superior cuando llegas a cierta posición.
+
+inherit
+El elemento hereda el valor de position de su elemento padre. */
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    font-family: sans-serif;            /*!temporal*/
+    background-color: #e2eaff;
+    color: #101632ee;
+}
+
+div,ul,nav,header,footer,a,li,label,body{
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ------------------------ MAIN SECTION ------------------------ */
+
+
+.proyecto-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  align-items: center;
+  container-type: inline-size;
+  container-name: proyecto-container;
+}
+
+
+
+.tarjeta {
+  width: 340px;
+  height: 370px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: end;
+  padding: 1rem;
+  color: white;
+  text-decoration: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* .tarjeta {
+  width: 300px;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  margin: 1rem;
+  transition: background-image 0.3s ease;
+  display: flex;
+  align-items: end;
+  padding: 1rem;
+  color: white;
+  text-decoration: none;
+} */
+
+.proyecto:hover {
+  transform: scale(1.02);
+}
+
+.proyecto img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.proyecto h3 {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: #333;
+  text-transform: uppercase;
+}
+
+
+
+
+/* ------------------------ END MAIN SECTION ------------------------ */
+
+/* @container proyecto-container (min-width:700px){
+    
+} */
+
+
+
+
+
+/* ------------------------ FOOTER SECTION ------------------------ */
+
+/* footer{
+    padding: 10px;
+    text-align: center;
+    background-color: #222;
+    color: #fff ;
+    font-size: 14px;
+} */
+
+/* ------------------------ END FOOTER SECTION ------------------------ */
+
+
+

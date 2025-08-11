@@ -1,23 +1,26 @@
 const proyectos = [
-  {
-    titulo: "EPA",
-    imagenNormal: "../imagenes/logo.png",
-    imagenHover: "../imagenes/vistas.png",
-    link: "../PROYECTOS/EPA.html",
   
+    {    
     titulo: "EPA",
-    imagenNormal: "../imagenes/logo.png",
-    imagenHover: "../imagenes/vistas.png",
-    link: "../PROYECTOS/EPA.html",
+    primeraImg: "../imagenes/logo.png",
+    segundaImg: "../imagenes/vistas.png",
+    link: "../PROYECTOS/EPA.html",},
   
-    titulo: "EPA",
-    imagenNormal: "../imagenes/logo.png",
-    imagenHover: "../imagenes/vistas.png",
-    link: "../PROYECTOS/EPA.html",
+    {    
+    titulo: "aaa",
+    primeraImg: "../imagenes/logo.png",
+    segundaImg: "../imagenes/vistas.png",
+    link: "../PROYECTOS/AAA.html",},
   
-  },
+    { 
+    titulo: "asdasd",
+    primeraImg: "../imagenes/logo.png",
+    segundaImg: "../imagenes/vistas.png",
+    link: "../PROYECTOS/asdasd.html",},
+  
 
 ];
+
 
 
 
@@ -25,17 +28,19 @@ const proyectos = [
 const contenedor = document.getElementById("proyectos");
 
 proyectos.forEach(p => {
-  const div = document.createElement("div");
-  div.classList.add("tarjeta");
-  div.style.backgroundImage = `url(${p.imagenNormal})`;
-
-  div.addEventListener("mouseenter", () => {          //como el hover
-    div.style.backgroundImage = `url(${p.imagenHover})`;
-  });
-  div.addEventListener("mouseleave", () => {
-    div.style.backgroundImage = `url(${p.imagenNormal})`;
-  });
-
-  div.innerHTML = `<a href="${p.link}"><h3>${p.titulo}</h3></a>`;
-  contenedor.appendChild(div);
+  const card = document.createElement("article");
+  card.className = "tarjeta";
+  card.innerHTML = `
+  <div class="proyectos-container">
+    <a class="tarjeta__link" href="${p.link}">
+      <div class="tarjeta__img">
+        <img class="img-default" src="${p.primeraImg}" alt="${p.titulo}">
+        <img class="img-hover" src="${p.segundaImg}" alt="${p.titulo}">
+        <h3 class="tarjeta__title">${p.titulo}</h3>
+      </div>
+    </a>
+  
+  </div>
+  `;
+  contenedor.appendChild(card);
 });

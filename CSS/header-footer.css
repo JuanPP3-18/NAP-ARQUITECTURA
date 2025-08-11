@@ -15,13 +15,14 @@ div,ul,nav,header,footer,a,li,label,body{
 }
 
 
+
 .header{
     background-color: #222;
     display: flex;
     justify-content: space-between;
     align-items: center;
     min-width: 100%;
-    /* width: 1200px; */
+    width: 100%;
 
     container-type: inline-size;         /*para el responsive*/
     container-name: header ;
@@ -143,3 +144,17 @@ div,ul,nav,header,footer,a,li,label,body{
         display: none;
     }
 }
+
+
+/* ------------------------ FOOTER SECTION ------------------------ */
+
+/* footer{
+    padding: 10px;
+    text-align: center;
+    background-color: #222;
+    color: #fff ;
+    font-size: 14px;
+} */
+
+/* ------------------------ END FOOTER SECTION ------------------------ */
+
